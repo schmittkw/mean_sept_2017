@@ -1,3 +1,5 @@
+// The only purpose of this file is to connent to our database
+
 const mongoose = require('mongoose');
 const fs = require('fs');
 

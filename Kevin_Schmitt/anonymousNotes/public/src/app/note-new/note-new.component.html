@@ -7,6 +7,6 @@
     </div>
   </form>
   <div class="notes">
-    <p *ngFor='let error of errors'>{{ error }}</p>
+    <p *ngFor='let error of errors' [ngStyle]="{'color': 'red'}">{{ error }}</p>
   </div>
 </div>

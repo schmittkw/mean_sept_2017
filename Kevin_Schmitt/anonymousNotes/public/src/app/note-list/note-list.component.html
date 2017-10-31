@@ -1,7 +1,8 @@
-<p>
+<!-- <p>
   {{ notes | json }}
-</p>
+</p> -->
 
-<div *ngFor='let note of notes'>
-  <p>{{ note.note }}</p>
+<div *ngFor='let note of notes; let idx = index'>
+  <p>{{ idx+1 }} -- {{ note.note }} -- {{ note.createdAt }} -- <button (click)='destroyNote(note._id, idx)'>Delete</button></p>
+  <p></p>
 </div>

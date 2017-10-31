@@ -19,5 +19,11 @@ export class NoteService {
       err => console.log(err)
     )
   }
+  destroy(id: string, callback) {
+    this._http.delete(`/notes/${id}`).subscribe(
+      res => callback(res.json()),
+      err => console.log(err)
+    );
+  }
 
 }
