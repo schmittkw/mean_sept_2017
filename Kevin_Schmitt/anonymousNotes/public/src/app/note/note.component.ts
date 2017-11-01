@@ -21,7 +21,6 @@ export class NoteComponent implements OnInit {
   }
   destroyNote(idx:number){
     console.log(idx);
-    this.notes.splice(idx,1);
     this.getNotes()
   }
 
