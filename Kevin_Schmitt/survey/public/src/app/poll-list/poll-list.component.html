@@ -1,0 +1,7 @@
+{{ polls | json }}
+
+
+<div>
+  <button (click)='logout()' class='float-right'>Logout</button>
+  <button [routerLink]="['/create']" class='float-right'>Add a New Poll</button>
+</div>

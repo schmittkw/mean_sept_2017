@@ -12,6 +12,7 @@ export class NoteListComponent implements OnInit {
 
   @Input() notes: Note[];
   @Output() destroyNoteEvent = new EventEmitter();
+  idx:number = null;
 
   constructor(
     private _route: ActivatedRoute,
@@ -24,8 +25,9 @@ export class NoteListComponent implements OnInit {
 
   destroyNote(id:string, idx:number){
     console.log('...destroying...')
-    this._noteService.destroy(id, res => {console.log('stilltrying');
-    this.destroyNoteEvent.emit(idx)});
+    this.idx = idx
+    this._noteService.destroy(id, res => {console.log('response from destroy service');
+    this.destroyNoteEvent.emit(this.idx)});
   }
   
 

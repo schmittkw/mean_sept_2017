@@ -19,9 +19,9 @@ export class NoteComponent implements OnInit {
   getNotes() {
     this._noteService.index(notes => this.notes = notes)
   }
-  destroyNote(idx:number){
+  destroyNote(idx){
     console.log(idx);
-    this.getNotes()
+    this.notes.splice(idx,1)
   }
 
 }
