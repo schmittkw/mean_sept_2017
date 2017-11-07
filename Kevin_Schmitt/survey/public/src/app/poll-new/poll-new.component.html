@@ -1,4 +1,5 @@
 <button [routerLink]="['/dashboard']" class='float-right'>Cancel</button>
+question must be at least 10 letters and options must be at least 3
 <div>
   <form (submit)='createPoll()'>
     <div>
@@ -21,7 +22,7 @@
       <label>Option 4</label>
       <input type="text" name="option4" [(ngModel)]='newPoll.option4.option'>
     </div>
-    <div>
+    <div *ngIf='newPoll.option1.option.length > 2 && newPoll.option2.option.length > 2 && newPoll.option3.option.length > 2 && newPoll.option4.option.length > 2'>
       <input type="submit" value="Submit">
     </div>
   </form>

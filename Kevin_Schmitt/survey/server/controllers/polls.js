@@ -29,13 +29,13 @@ class PollsController {
                 return res.json(err)
             }
             if(!poll){
-                return res.json({ status: 'Poll not found' })
+                return res.json({ status: false, msg: 'Poll not found' })
             }
             if(poll.user == req.session.user_id){
                 poll.remove();
                 return res.json({ status: true })
             } else {
-                return res.json({ status: 'User not authorized' })
+                return res.json({ status: false, msg: 'User not authorized' })
             }
         })
     }

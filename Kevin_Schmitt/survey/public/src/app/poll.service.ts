@@ -15,7 +15,7 @@ export class PollService {
     this._http.get('/polls').subscribe(
       res => callback(res.json()),
       err => console.log(err)
-    )
+    );
   }
 
   create(newPoll: NewPoll, callback) {
@@ -29,14 +29,14 @@ export class PollService {
     this._http.get(`/polls/${id}`).subscribe(
       res => callback(res.json()),
       err => console.log(err)
-    )
+    );
   }
 
   destroy(id: string, callback){
     this._http.delete(`/polls/${id}`).subscribe(
       res => callback(res.json()),
       err => console.log(err)
-    )
+    );
   }
 
 

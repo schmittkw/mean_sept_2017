@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.newUser.name = 'Kevin';
-    this.createUser();
+    // this.newUser.name = 'Kevin';
+    // this.createUser();
   }
 
   createUser() {

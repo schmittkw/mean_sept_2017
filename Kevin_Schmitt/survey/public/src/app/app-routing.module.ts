@@ -19,10 +19,10 @@ const routes: Routes = [
     path: 'create',
     component: PollNewComponent
   },
-  // {
-  //   path: 'poll/:id',
-  //   component: PollShowComponent
-  // }
+  {
+    path: 'poll/:id',
+    component: PollShowComponent
+  }
 ];
 
 @NgModule({
